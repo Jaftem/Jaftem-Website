@@ -148,10 +148,13 @@ span {
     font-family: 'Source Code Pro';
     background-color: #FFF;
     color: #414E6E;
-    padding: 10px;
+    margin-top: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 6px;
     font-size: 11px;
     line-height: 175%;
-    height: 254px;
+    height: 253px;
     overflow-x: hidden;
 }
 

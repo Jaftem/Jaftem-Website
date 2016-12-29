@@ -110,7 +110,7 @@ export class LineService  {
 
   resume() {
       this.newLines.next("resume");
-      var url:string =`CLICK HERE ========> [ <a href="http://www.google.com">RESUME</a> ]`;
+      var url:string =`Click here ========> [ <a href="https://drive.google.com/file/d/0BywUZPjWJGBbaEhEYl84T2ttaE0/view?usp=sharing">RESUME</a> ]`;
       this.newLines.next(url);
   }
 
@@ -144,8 +144,7 @@ export class LineService  {
       var r:string    = spc + "$resume  - link to resume<br />";
       var ct:string   = spc + "$contact - contact information<br />";
       var c:string    = spc + "$clear   - clear terminal<br />";
-      var s:string    = spc + "$social  - social links<br />";
-      hlp = hlp + w + r + ct + c + s;
+      hlp = hlp + w + r + ct + c;
       this.newLines.next(hlp);
   }
 }

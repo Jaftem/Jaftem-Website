@@ -1,6 +1,6 @@
 import { WebsitePage } from './app.po';
 
-describe('website App', function() {
+describe('Personal Website', function() {
   let page: WebsitePage;
 
   beforeEach(() => {
