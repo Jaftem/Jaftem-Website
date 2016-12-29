@@ -19,7 +19,7 @@ span {
 .window {
   background: #FFF;
   width: 43vw;
-  height: 38vh;
+  height: 300px;
   margin: auto;
   margin-top: 25.5vh;
   border: 1px solid #acacac;
@@ -146,10 +146,13 @@ span {
 
 .content {
     font-family: 'Source Code Pro';
+    background-color: #FFF;
     color: #414E6E;
     padding: 10px;
     font-size: 11px;
     line-height: 175%;
+    height: 254px;
+    overflow-x: hidden;
 }
 
 /* window END */

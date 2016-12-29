@@ -18,10 +18,19 @@
     <!-- window title -->
   </div>
   <div class="content">
+      <!--
     guest@jaftem:~$ &nbsp;!welcome<br />
-    guest@jaftem:~$ &nbsp;Hi, my name is <b>Jeremy</b> and I'm a CS student in Los Angeles, California.<br />
-    guest@jaftem:~$ &nbsp;Type `help` for a list of commands.<br />
-    guest@jaftem:~$ &nbsp;
+    guest@jaftem:~$ &nbsp;Hi, my name is <b>Jeremy</b> and I'm a CS student living in sunny Los Angeles,<br />
+    guest@jaftem:~$ &nbsp;California. Type `help` for a list of commands.<br />
+    guest@jaftem:~$ &nbsp;-->
     <!-- window content -->
+
+    <!-- LINES -->
+    <line
+        *ngFor="let str of lines | async"
+        [str]="str">
+    </line>
+    <!-- PROMPT -->
+    <prompt></prompt>
   </div>
 </div>

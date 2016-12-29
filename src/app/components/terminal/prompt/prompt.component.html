@@ -1,0 +1,9 @@
+<div class="line-container">
+            <div class="username">{{ user }}</div>
+            <input type="text"
+                class="prompt-input-style"
+                (keydown.enter)="onEnter($event)"
+                [(ngModel)]="cmd"
+                spellcheck="false"
+                autofocus>
+</div>

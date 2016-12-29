@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Roboto:700|Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:700');
 
 
 .main-container {
@@ -26,7 +27,19 @@
     width: 100%;
     position: absolute;
     bottom: 0;
-    height: 20px;
+    height: 50px;
+    background-color: #E5E7EA;
+    font-family: 'Open Sans';
+    text-align: center;
+    line-height: 50px;
+    font-size: 12px;
+}
+
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 0px;
     background-color: #E5E7EA;
 }
 
@@ -36,5 +49,5 @@
     position: absolute;
     text-align: center;
     left: 0; right: 0;
-    bottom: 15px;
+    bottom: 45px;
 }

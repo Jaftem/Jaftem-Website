@@ -1,12 +1,12 @@
 .username {
     font-weight: 700;
     font-family: 'Source Code Pro';
-    margin-right: 11px;
+    margin-right: 6px;
+    display: inline;
 }
 
 .line-container {
     width: 100%;
-    padding-bottom: 2px;
     font-family: Open Sans;
     font-size: 12px;
     display: flex;
@@ -15,12 +15,8 @@
     font-size: 11px;
     color: #414E6E;
 }
-.prompt-input-style {
-    background-color: #FFF;
-    border: none;
-    width: 100%;
-    font-family: 'Source Code Pro';
-    color: #414E6E;
-    font-size: 11px;
-    outline-width: 0;
+
+.line-str {
+    display: inline;
+    white-space:pre;
 }
