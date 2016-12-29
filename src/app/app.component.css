@@ -1,0 +1,40 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700|Source+Code+Pro');
+
+
+.main-container {
+     margin: auto;
+     position: absolute;
+     top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 55px;
+    padding-top: 10vh;
+    width: 100vh;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 700;
+    color: #141E30;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    background-color: #E5E7EA;
+}
+
+.los-angeles {
+    width: 800px;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    left: 0; right: 0;
+    bottom: 15px;
+}
