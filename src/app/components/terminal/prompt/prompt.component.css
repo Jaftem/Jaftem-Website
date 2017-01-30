@@ -2,25 +2,40 @@
     font-weight: 700;
     font-family: 'Source Code Pro';
     margin-right: 11px;
+    padding-left: 3px;
+    /*border-left: 1px solid #CCC;*/
 }
 
 .line-container {
     width: 100%;
     padding-bottom: 2px;
-    font-family: Open Sans;
     font-size: 12px;
     display: flex;
-    background-color: #FFF;
+    background-color:  #f1f2f4;
     font-family: 'Source Code Pro';
-    font-size: 11px;
     color: #414E6E;
 }
+
 .prompt-input-style {
-    background-color: #FFF;
+    background-color: #f1f2f4;
     border: none;
     width: 100%;
     font-family: 'Source Code Pro';
-    color: #414E6E;
-    font-size: 11px;
+    color: #1e1e1e;
+    font-size: 12px;
     outline-width: 0;
+    outline: none;
+}
+.input-txt {
+    display: inline;
+}
+
+.linenum {
+    text-align: right;
+    padding-right: 8px;
+    background: #d4d5d6;
+    color: #a5a5a5;
+    padding-left: 4px;
+    display: inline;
+    width: 18px;
 }

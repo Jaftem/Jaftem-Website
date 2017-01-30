@@ -11,6 +11,7 @@ import { LineService } from "../../../services/line.service";
 })
 
 export class PromptComponent implements OnInit {
+    ln: number;
     cmd: string;
     user: string = "user@jaftem.com:~$";
 
@@ -19,8 +20,8 @@ export class PromptComponent implements OnInit {
                 public el:ElementRef) {
     }
     ngOnInit() {
+        this.ln = 1;
         this.cmd = "";
-
         this.type("hello", 0);
     }
 
@@ -29,6 +30,11 @@ export class PromptComponent implements OnInit {
         event.preventDefault();
     }
     sendCmd() {
+        if (this.cmd == 'clear') {
+            this.ln = 1;
+        } else {
+            this.ln += 1;
+        }
         this.lineService.addCmd(this.cmd);
         this.cmd = "";
     }

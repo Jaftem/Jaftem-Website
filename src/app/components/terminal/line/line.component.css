@@ -7,16 +7,31 @@
 
 .line-container {
     width: 100%;
+    overflow: hidden;
     font-family: Open Sans;
     font-size: 12px;
     display: flex;
-    background-color: #FFF;
+    background-color:  #f1f2f4;
     font-family: 'Source Code Pro';
-    font-size: 11px;
     color: #414E6E;
 }
 
 .line-str {
     display: inline;
     white-space:pre;
+}
+
+.linenum {
+    text-align: right;
+    padding-right: 8px;
+    background: #e3e3e5;
+    color: #a5a5a5;
+    /*display: inline;*/
+    padding-left: 4px;
+    width: 18px;
+}
+
+.container-right {
+    padding-left: 5px;
+  /* border-left: 1px solid #CCC;*/
 }

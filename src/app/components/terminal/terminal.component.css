@@ -17,14 +17,15 @@ span {
 }
 
 .window {
-  background: #FFF;
-  width: 43vw;
-  height: 300px;
+  background: #f1f2f4;
+  max-width: -webkit-calc(800px - (30px * 2));
+  max-width: calc(800px - (30px * 2));
+  height: 350px;
   margin: auto;
-  margin-top: 25.5vh;
-  border: 1px solid #acacac;
-  /*border-radius: 6px;*/
-  box-shadow: 0px 0px 20px #acacac;
+  margin-top: 0;
+  /*border: 1px solid #CCC;*/
+  border-radius: 6px;
+  /*box-shadow: 0px 0px 10px #acacac;*/
 }
 
 .titlebar {
@@ -143,18 +144,22 @@ span {
   visibility: hidden;
   cursor: default;
 }
-
+.dark-bg {
+    height: 100%;
+    background: #545454;
+    width: 18px;
+}
 .content {
+    border-radius: 6px;
     font-family: 'Source Code Pro';
-    background-color: #FFF;
+    background-color:  #f1f2f4;
     color: #414E6E;
-    margin-top: 2px;
-    margin-left: 4px;
+    padding-top: 0px;
+    padding-left: 0px;
     margin-right: 4px;
-    padding: 6px;
     font-size: 11px;
     line-height: 175%;
-    height: 253px;
+    height: 355px;
     overflow-x: hidden;
 }
 

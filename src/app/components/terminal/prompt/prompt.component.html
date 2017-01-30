@@ -1,9 +1,12 @@
 <div class="line-container">
+            <div class="linenum">{{ ln }}</div>
             <div class="username">{{ user }}</div>
-            <input type="text"
-                class="prompt-input-style"
-                (keydown.enter)="onEnter($event)"
-                [(ngModel)]="cmd"
-                spellcheck="false"
-                autofocus>
+            <div class="input-txt">
+                <input type="text"
+                    class="prompt-input-style"
+                    (keydown.enter)="onEnter($event)"
+                    [(ngModel)]="cmd"
+                    spellcheck="false"
+                    autofocus>
+            </div>
 </div>

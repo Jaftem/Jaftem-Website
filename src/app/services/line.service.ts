@@ -1,9 +1,9 @@
 // Line service for terminal
 // Each line in the terminal comes through here!
 
-import {Injectable} from '@angular/core';
+import { Injectable} from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
-import {Subject} from 'rxjs/Subject';
+import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
@@ -29,6 +29,9 @@ export class LineService  {
   // "action"" streams
   create: Subject<string> = new Subject<string>();
   clear: Subject<string> = new Subject<string>();
+
+  // For cmds
+  spc:string = "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; ";
 
   constructor(private http: Http) {
     this.lines = this.updates
@@ -91,6 +94,9 @@ export class LineService  {
           case 'contact':
             this.contact();
             break;
+          case 'ls':
+            this.ls();
+            break;
           default:
             this.cmdNotFound(line);
             break;
@@ -109,8 +115,9 @@ export class LineService  {
   }
 
   resume() {
-      this.newLines.next("resume");
-      var url:string =`Click here ========> [ <a href="https://drive.google.com/file/d/0BywUZPjWJGBbaEhEYl84T2ttaE0/view?usp=sharing">RESUME</a> ]`;
+      var url:string =`resume<br />` +
+      this.spc + `Click here =======> [ <a href="https://drive.google.com/file/d/0BywUZPjWJGBbaEhEYl84T2ttaE0/view?usp=sharing">RESUME</a> ]` +
+      `<br />`;
       this.newLines.next(url);
   }
 
@@ -119,9 +126,8 @@ export class LineService  {
   }
 
   hello() {
-      this.newLines.next("hello");
-      var wlc: string =
-      `Hi, my name is <b>Jeremy Aftem</b>` +
+      var wlc: string = "hello<br />" +
+      `Hi, my name is <span class="highlight">Jeremy Aftem</span>` +
       ` and I am a CS student living in sunny Los Angeles, California.<br/>` +
       `I love to build things that people will use and video/photograph my life.<br />` + ` <br />` +
       `Type \`help\` for a list of available commands.<br />`;
@@ -129,17 +135,19 @@ export class LineService  {
   }
   
   contact() {
-      this.newLines.next("contact");
-      var spc:string = "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; ";
-      var c:string = "[EMAIL : aftem@usc.edu]<br/>" + spc + "[PHONE : (323) 765-5422]";
-
+      let spc:string = this.spc;
+      var c:string = "contact<br />" +
+               spc + "=============================<br />" +
+               spc + "     CONTACT INFORMATION<br />" +
+               spc + "=============================<br />" +
+               spc + "[EMAIL :      aftem@usc.edu ]<br/>" +
+               spc + "[PHONE :     (323) 765-5422 ]";
       this.newLines.next(c);
   }
 
   help() {
-      this.newLines.next("help");
       var spc:string = "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ";
-      var hlp: string = "AVAILABLE COMMANDS: <br />";
+      var hlp: string = "help<br />" + spc + "AVAILABLE COMMANDS: <br />";
       var w:string    = spc + "$hello   - welcome message<br />";
       var r:string    = spc + "$resume  - link to resume<br />";
       var ct:string   = spc + "$contact - contact information<br />";
@@ -147,4 +155,13 @@ export class LineService  {
       hlp = hlp + w + r + ct + c;
       this.newLines.next(hlp);
   }
+
+  ls() {
+    var ls:string = "ls" +
+    `<br/>Watareudoing.jar                         thisIsntAnActualCmdline/<br/>` +
+    `README.md                                badCode.js<br />` +
+    `TODO-ImplementFolders/<br /> <br/>`;
+    this.newLines.next(ls);
+  }
+
 }

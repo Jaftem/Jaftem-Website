@@ -1,22 +1,20 @@
 <div class="window">
+  <!--
   <div class="titlebar">
     <div class="buttons">
       <div class="close">
         <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-        <!-- close button link -->
       </div>
       <div class="minimize">
         <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-        <!-- minimize button link -->
       </div>
       <div class="zoom">
         <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-        <!-- zoom button link -->
       </div>
     </div>
     
-    <!-- window title -->
   </div>
+  -->
   <div class="content">
       <!--
     guest@jaftem:~$ &nbsp;!welcome<br />
@@ -27,10 +25,12 @@
 
     <!-- LINES -->
     <line
-        *ngFor="let str of lines | async"
-        [str]="str">
+        *ngFor="let str of lines | async; let i = index"
+        [str]="str"
+        [ln]="i">
     </line>
     <!-- PROMPT -->
     <prompt></prompt>
+
   </div>
 </div>

@@ -4,12 +4,13 @@ import { LineService } from "../../../services/line.service";
 
 @Component({
     selector: 'line',
-    inputs: ['str'],
+    inputs: ['str', 'ln'],
     templateUrl: '../../../components/terminal/line/line.component.html',
     styleUrls: ['../../../components/terminal/line/line.component.css']
 })
 
 export class LineComponent implements OnInit {
+    ln: number;
     str: string;
     user: string = "user@jaftem.com:~$";
     // Need user credentials in future
