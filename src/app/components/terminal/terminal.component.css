@@ -20,7 +20,7 @@ span {
   background: #f1f2f4;
   max-width: -webkit-calc(800px - (30px * 2));
   max-width: calc(800px - (30px * 2));
-  height: 350px;
+  height: 275px;
   margin: auto;
   margin-top: 0;
   /*border: 1px solid #CCC;*/
@@ -159,7 +159,7 @@ span {
     margin-right: 4px;
     font-size: 11px;
     line-height: 175%;
-    height: 355px;
+    height: 270px;
     overflow-x: hidden;
 }
 

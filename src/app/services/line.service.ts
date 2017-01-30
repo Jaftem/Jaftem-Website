@@ -129,7 +129,7 @@ export class LineService  {
       var wlc: string = "hello<br />" +
       `Hi, my name is <span class="highlight">Jeremy Aftem</span>` +
       ` and I am a CS student living in sunny Los Angeles, California.<br/>` +
-      `I love to build things that people will use and video/photograph my life.<br />` + ` <br />` +
+      `I love to build, develop, and create things that people will find useful. In my spare time,<br />I photograph and film my life.<br />` + ` <br />` +
       `Type \`help\` for a list of available commands.<br />`;
       this.newLines.next(wlc);
   }
