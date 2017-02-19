@@ -1,5 +1,6 @@
 .username {
     font-weight: 700;
+    font-size: 12px;
     font-family: 'Source Code Pro';
     margin-right: 6px;
     display: inline;
@@ -8,7 +9,6 @@
 .line-container {
     width: 100%;
     overflow: hidden;
-    font-family: Open Sans;
     font-size: 12px;
     display: flex;
     background-color:  #f1f2f4;
@@ -23,15 +23,15 @@
 
 .linenum {
     text-align: right;
-    padding-right: 8px;
+    padding-right: 12px;
     background: #e3e3e5;
     color: #a5a5a5;
     /*display: inline;*/
     padding-left: 4px;
-    width: 18px;
+    width: 20px;
 }
 
 .container-right {
-    padding-left: 5px;
+    padding-left: 15px;
   /* border-left: 1px solid #CCC;*/
 }
